@@ -3,10 +3,10 @@
 var loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    let username = document.getElementById("username").value;
+    let email = document.getElementById("email").value;
     let password = document.getElementById("pwd").value;
     let details = JSON.stringify({
-        "username": username,
+        "email": email,
         "password": password
     })
     fetch('http://127.0.0.1:5000/api/v2/auth/login', {
@@ -30,8 +30,9 @@ loginForm.addEventListener("submit", (event) => {
             if (data.message == 'You have succesfully logged in') {
                 token = data.auth_token
                 window.localStorage.setItem('auth_token', token)
+                console.log(window.localStorage.getItem('auth_token'))
                 window.location = 'questions.html'
-                console.log(token)
+                window.localStorage.setItem('auth_token',data.auth_token)
             } else {
                 document.getElementById('error').innerHTML = data.message
                 document.getElementById('error').style.backgroundColor = 'sienna';
@@ -40,7 +41,7 @@ loginForm.addEventListener("submit", (event) => {
             }
         })
         .catch((error) => {
-            let data = data.message
+            let data = error.message
             console.log(data)
         })
 });

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<div id="profile">
+		<!--begin profile-->
+		<div id="header">
+			<ul>
+				<li>
+					<h2 id="logo">StackOverFLowLite</h2>
+				</li>
+				<li id="right">
+					<a href="#" id="logout" onclick="logOut(event)">Logout</a>
+					<script src="js/logout.js"></script>
+				</li>
+				<li id="right">
+					<a href="profile.html">My profile</a>
+				</li>
+			</ul>
+		</div>
+		<div id="body">
+			<br>
+			<br>
+			<div class="wrap">
+				<div class="row">
+					<div class="column">
+						<div id="search">
+							<form class="search-container">
+								<input type="text" id="search-bar" placeholder="Search StackOverFlowLite...">
+								<a href="#">
+									<img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
+								</a>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div id="answer">
+					<div id="table">
+						<table>
+							<h2>My Profile Information</h2>
+							<tr>
+								<div id="profileImageDisplay">
+									<img src="images/flower.png" id="profileImage" width="150px" height="150px">
+								</div>
+							</tr>
+							<tr>
+								<td>Email: someemail@domain.com | </td>
+								<td>Password: ******* | </td>
+
+								<td>
+									<input type="submit" value="Update Profile" id="Updateprofile">
+								</td>
+							</tr>
+						</table>
+						<h2>
+							<a href="questions.html">Ask a question</a> | | All Questions(5)</h2>
+						<table>
+							<thead>Recent Questions</thead>
+							<tr>
+								<th id="question" onclick="displayAnswer()">Why is Javacript so powerful and how does it differ from coffee script</th>
+								<td>
+									<i>5 Minutes ago</i>
+								</td>
+								<td id="delete">Remove</td>
+								<td id="edit">Edit</td>
+							</tr>
+							<tr>
+								<th id="question">How does ES6 let Variable declaration differ from te conventional var</th>
+								<td>
+									<i>15 Minutes ago</i>
+								</td>
+								<td id="delete">Remove</td>
+								<td id="edit">Edit</td>
+							</tr>
+						</table>
+						<h2>My Questions With Most Answers</h2>
+						<table>
+							<tr>
+								<th id="question">How do I connect my laptop to the neighbour's Protected Wifi? </th>
+								<td>Answers
+									<a>
+										<i> 5</i>
+									</a>
+								</td>
+								<td id="delete">Remove</td>
+								<td id="edit">Edit</td>
+							</tr>
+							<tr>
+								<th id="question">Somebody help me Know how to view items Stored in form data object? </th>
+								<td>Answers
+									<a>
+										<i> 3</i>
+									</a>
+								</td>
+								<td id="delete">Remove</td>
+								<td id="edit">Edit</td>
+							</tr>
+							<tr>
+								<th id="question"> Any ideas on which IDE is best for a newbie like me </th>
+								<td>Answers
+									<a>
+										<i> 3</i>
+									</a>
+								</td>
+								<td id="delete">Remove</td>
+								<td id="edit">Edit</td>
+
+							</tr>
+
+						</table>
+					</div>
+					<br>
+					<!--end div table-->
+				</div>
+				<br>
+				<br>
+				<!--end wrap-->
+			</div>
+			<!--end body-->
+			<div id="footer" style="position: relative;">
+				<p>&copy StackOverFlowLite.All rights reserved </p>
+			</div>
+		</div>
+		<!--end of profile-->
+</body>
+
+</html>
