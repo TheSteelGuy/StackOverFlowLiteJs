@@ -337,7 +337,7 @@ input#search-bar{
 #comment{
     padding: 0px;
     text-align: left;
-    font-style: italic;
+    font-style: italic; 
 }
 
 
@@ -363,9 +363,17 @@ input#search-bar{
     margin-top:90px;
 }
 #quizTitle{
-    cursor: pointer;
+   cursor: pointer;
    color: dodgerblue;
 }
+#quest{
+   cursor: pointer;
+   color: dodgerblue;
+}
+#ans{
+    cursor: pointer;
+    color: black;
+ }
 .wrap{
     width: 75%;
     margin: auto;

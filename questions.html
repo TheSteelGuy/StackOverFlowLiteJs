@@ -10,7 +10,8 @@
 	<script src="main.js"></script>
 </head>
 
-<body>
+<body onload="fetchQuestions()">
+	<script src="js/questions.js"></script>
 	<div id="profile">
 		<!--begin questions-->
 		<div id="header">
@@ -48,19 +49,21 @@
 									</a>
 								</form>
 							</div>
-						</div>
+						</div> 
 						<div class="column">
 
 						</div>
 					</div>
 					<h3>Questions</h3>
+					<p id="error"></p>
 					<div id="answer">
-						<h4 id="quizTitle" onclick="displayAnswer()">Why is Javacript so powerful and how does it differ to coffee script</h4>
-						<p style="color: black;">
-							CoffeeScript is a programming language, inspired by Ruby, Python, and Haskell. CoffeeScript is not ECMAScript, or JavaScript
-							- it's entirely its own language, but it compiles to ECMAScript. You write it as CoffeeScript, then use a compiler
-							to convert it to ECMAScript.....
-						</p>
+						<div id="quest">
+						</div>
+						<div id="ans">
+							<p style="color: black;">
+				
+							</p>
+						</div>
 						<a>Asked by
 							<strong>Jane,</strong>
 							<i>5 Minutes ago</i>
@@ -88,10 +91,10 @@
 						<p>Comments 2</p>
 					</div>
 					<div id="quiz-form">
-						<p id="error"></p>
-						<input type="text" id="quizTitle" required placeholder="Question title: should be clear and precise">
+						<input type="text" id="title" required placeholder="Question title: should be clear and precise">
 						<input type="text" id="quizBody"  placeholder="Type Question description here..">
-						<input type="submit" value="Ask Question">
+						<input type="submit" value="Ask Question" id="quiz_form" onclick="questionForm(event)">
+						<script src="js/askquiz.js"></script>
 					</div>
 					<br>
 					<br>
