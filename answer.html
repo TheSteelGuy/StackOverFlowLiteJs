@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Answer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" /></head>
+
+<body onload="displayResult()">
+	<div id="profile">
+		<div id="header">
+			<ul>
+				<li>
+					<h2 id="logo">StackOverFLowLite</h2>
+				</li>
+				<li>
+					<a class="active" href="answer.html">Answers</a>
+				</li>
+				<li>
+					<a href="questions.html">Questions</a>
+				</li>
+				<li id="right">
+					<a href="#" id="logout" onclick="logOut(event)">Logout</a>
+					<script src="js/logout.js"></script>
+				</li>
+				<li id="right">
+					<a href="profile.html">My profile</a>
+				</li>
+			</ul>
+		</div>
+		<div class="wrappper">
+			<div id="body">
+				<br>
+				<br>
+				<div class="wrap">
+					<br>
+					<div id="answer">
+						<!-- alert Model -->
+						<div id="myModal" class="modal">
+								<div class="modal-content" id="modal-content">
+								  <span class="close">&times;</span>
+								  <p id="message"></p>
+								</div>
+							</div>
+						<h4 id="quest"></h3>
+						<p id="quest_body"></p>
+						<p id="answer_no"></p>
+						<div id="answers">
+						</div>
+						<div id="vote">
+						</div>
+
+						<div id="answerForm">
+							<div class="alert">
+								<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+								<p id="error"></p> 
+							</div>
+							<textarea cols="2" rows="20" id="myAnswer"></textarea>
+							<input type="submit" id="myAnswerButton" value="Post An Answer" onclick="answerQuestion(event)">
+						</div>
+					</div>
+					<br>
+					<br>
+				</div><!--end wrap-->
+			</div><!--end body-->
+			<div id="footer" style="position: relative;">
+				<p>&copy StackOverFlowLite.All rights reserved </p>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/questions.js"></script>
+<script src="js/answers.js"></script>
+</html>

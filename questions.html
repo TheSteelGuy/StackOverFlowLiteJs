@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Questions</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<script src="main.js"></script>
+</head>
+
+<body onload="fetchQuestions()">
+	<div id="profile">
+		<!--begin questions-->
+		<div id="header">
+			<ul>
+				<li>
+					<h2 id="logo">StackOverFLowLite</h2>
+				</li>
+
+				<li>
+					<a class="active">Questions</a>
+				</li>
+				<li id="right">
+					<a href="#" id="logout" onclick="logOut(event)">Logout</a>
+					<script src="js/logout.js"></script>
+				</li>
+				<li id="right">
+					<a href="profile.html">My profile</a>
+				</li>
+			</ul>
+		</div>
+		<div class="wrapper">
+			<div id="body">
+				<!--begin body-->
+				<br>
+				<br>
+				<div class="wrap">
+					<div class="row">
+						<div class="column">
+							<div id="search">
+								<form class="search-container">
+									<input type="text" id="search-bar" placeholder="Search StackOverFlowLite...">
+									<a href="#">
+										<img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
+									</a>
+								</form>
+							</div>
+						</div> 
+						<div class="column">
+							<div class="loader">Loading...</div>
+						</div>
+					</div>
+					<h3>Questions</h3>
+					<div id="questions">
+						<div id="answer">
+							<div id="quest">
+							</div>
+						</div>
+					</div>
+					<div id="quiz-form">
+						<div class="alert">
+							<span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+							<p id="error"></p> 
+						</div>
+						<input type="text" id="title" required placeholder="Question title: should be clear and precise">
+						<input type="text" id="quizBody"  placeholder="Type Question description here..">
+						<input type="submit" value="Ask Question" id="quiz_form" onclick="questionForm(event)">
+						<script src="js/askquiz.js"></script>
+					</div>
+					<br>
+					<br>
+				</div>
+				<!--end row-->
+			</div>
+			<!--end body-->
+			<div id="footer" style="position: relative;">
+				<p>&copy StackOverFlowLite.All rights reserved </p>
+			</div>
+		</div>
+		<!--end of questions-->
+</body>
+<script src="js/questions.js"></script>
+</html>
