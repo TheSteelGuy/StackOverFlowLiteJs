@@ -1,0 +1,771 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans";
+    
+}
+.wrapper{
+    background-color:#3a475b;
+}
+#wrapper{
+    min-height: 100%;
+    position: relative;
+
+}
+#wrapperr{
+    min-height: 100%;
+    position: relative;
+    background-image: url(images/index.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+#header{
+    background-color:silver;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+#header ul li a{
+   color:black;
+}
+#logo{
+    padding-left: 20px;
+    margin:0px;
+    padding-top: 8px;
+
+}
+#body{
+    margin-top: 0px;
+    padding: 0px 10px 10px 10px;
+    padding-bottom: 70px; /*height of footer, important*/
+    text-align: center;
+}
+#footer{
+    position: absolute;
+    bottom:-70px;
+    width:100%;
+    height: 70px;/* height of footer*/
+    background-color: #333;
+    text-align: center;
+    color:white;
+    padding-top:20px; 
+}
+ul{
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    margin: 0px;
+    
+}
+li{
+    float :left ;
+}
+li a{
+    text-decoration: none;
+    display:block;
+    color: white;
+    font-size: 20px;
+    padding: 14px 18px;
+    text-align: center;
+}
+
+li a:hover {
+    background-color: #3a475b;
+}
+
+.active{
+    background-color:white;
+}
+
+.intro{
+    color:sienna;
+    font-size: 26px;
+    border: 80px;
+    margin: 24px 3px;
+    padding: 20px 5px;
+    
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+    table{
+        font-size: 10px;
+    }
+    h2{
+        font-size:15px;
+    }
+    #header a{
+        font-size: 10px;
+    }
+    button{
+        size: 6px;
+    }
+}
+* {
+    box-sizing: border-box; /* makes the last column appear inline*/
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+@media screen and (max-width:780px) {
+    .column {
+        width: 100%;
+    }
+}
+
+input[type=button]{
+    width:40%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    margin: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]{
+    width:40%;
+    background-color: #3a475b;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    margin: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+textarea{
+    width: 100%;
+    height: 140px;
+}
+#form{
+    max-width: 40%;
+    margin-left:auto;
+    margin-right: auto; 
+    margin-top: 15px;
+    padding-top: 24px;
+    text-align: left;
+    color: black;
+
+}
+.form_title{
+    background-color: silver;
+    padding: 1px 0;
+    color: black;
+    text-align: center;
+}
+#body h2{
+    background-color:#3a475b;
+    padding: 9px 0;
+    color: white;
+    border-radius: 12px;
+}
+#body h5{
+    display: inline;
+    margin-left: 19px;
+}
+#body button{
+    float:left;
+    margin-left: 19px;
+    margin-top: 9px;
+    margin-bottom: 10px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 6px;
+}
+
+#table{
+    overflow-x:auto;
+    background-color: white;
+}
+
+#nav{
+    text-decoration:none; 
+    
+}
+a {
+    text-decoration: none;
+}
+#right{
+    float: right;
+}
+.column {
+    min-width: 250px; /* Minimum width of your wrapper element */ 
+    overflow: hidden;
+    display: inline-block;
+  }
+.column {
+    float: left;
+    width: 49.33%;
+
+}
+.column h4{
+    color: dodgerblue;
+    text-align: left;
+}
+.column p{
+    text-align:left;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+.column #answerForm{
+    text-align: left;
+}
+@media screen and (min-width:900px) {
+    .answer {
+        width: 100%;
+    }
+}
+.col{
+    text-align: left;
+    padding-left: 20px;
+    
+}
+
+#profileImageDisplay{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+td{
+    background-color: white;
+}
+#table h4{
+    color: dodgerblue;
+    cursor: pointer;
+    padding-top: 2px;
+    margin-bottom: 1px;
+    padding-bottom: 2px;
+    margin-top: 1px;
+    text-align: left;
+}
+
+#Updateprofile{
+    width:155px;
+    margin:0px;
+    margin-left:60px;
+}
+
+.status{
+    padding-left: 60px;
+}
+
+#search{
+    padding-top:13px;
+
+  }
+.search-container{
+    width: 290px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+input#search-bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #D0CFCE;
+    outline: none;
+
+   }
+  
+.search-icon{
+    position: relative;
+    float: right;
+    width: 75px;
+    height: 75px;
+    top: -62px;
+    right: -25px;
+  }
+#vote,#votes{
+    padding-right: 10px;
+    margin: 0px;
+}
+#vote p {
+    display: inline;
+    margin-left:13px;
+    padding-right:20px; 
+    cursor: pointer;
+    color: white;
+    font-weight: 500px;
+}
+
+
+#comment{
+    padding: 0px;
+    text-align: left;
+    font-style: italic; 
+}
+
+#table .delete{
+    color: red;
+    cursor: pointer;
+    padding-left: 20px;
+}
+.edit{
+    color:green;
+    cursor: pointer;
+    padding-left: 10px;
+}
+.index{
+    width: 80%;
+    margin: auto;
+    color: white;
+    font-weight: 100
+}
+.index h3{
+    padding: 22px 12px 0px 12px;
+    font-size: 50px;
+    margin-top:90px;
+}
+#quest{
+   color: dodgerblue;
+   text-align: left;
+}
+#quest h4{
+   cursor: pointer;
+}
+#quest input{
+    display: none;
+ }
+
+.wrap{
+    width: 75%;
+    margin: auto;
+
+    border-radius:25px;
+}
+
+#answer p{
+    margin: 3px;
+    padding: 1px;
+    color: black;
+    text-justify: inter-cluster;
+    text-align: left
+}
+#answer a{
+    color: darkgreen;
+    text-justify: inter-cluster;
+    padding-right: 9px;
+    margin-right: 6px;
+    cursor: pointer;
+}
+#answers input{
+    display: none;
+}
+#answer i{
+    font-weight: bold;
+}
+#quiz-form{
+    background-color: white;
+    border: 11px solid white;
+    padding: 5px 2px;
+    margin: 2px 25px 2px 25px;
+    border-radius: 22px;
+    box-sizing: border-box;
+}
+
+#logo{
+    padding-right: 29px;
+}
+#quizBody, #answerBody{
+    height: 80px;;
+}
+#ruler{
+    width: 50%;
+    padding: 4px;
+    background-color: white;
+}
+#answers{
+    text-align: left;
+}
+
+#questionTitle{
+    display: none;
+}
+.modal , .Modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.Modal #message{
+    color: white;
+}
+/* Modal Content */
+.modal-content, .modalContent {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 4px 2px 2px 1px black;
+}
+
+/* The Close Button */
+.close, #close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,#close:hover,
+.close:focus {
+    color:red;
+    text-decoration: none;
+    cursor: pointer;
+}
+#editThis{
+    background-color: green; 
+}
+#editThis:hover{
+    background-color: cadetblue;    
+}
+#editThis b{
+    padding: 10px;   
+}
+#answerContent:hover{
+    border: 2px inset skyblue;
+}
+#answerContent{
+    border-radius: 5px;
+}
+.alert{
+    padding: 15px;
+    color: white;
+    margin-bottom: 6px;
+}
+.alert #error{
+    color: white;
+    padding: 0px;
+    text-align: center;
+}
+#error{
+    color: white;
+    padding: 15px;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+.comDisplay{
+    padding-left: 27px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color:#e2e7ee;
+    border-radius: 5px;
+}
+.comDisplay p{
+    padding: 1px;
+    margin: 1px;
+    font-size:13px;
+    font-style: oblique;
+}
+.comDisplay i{
+    color: green;
+}
+
+#countComment{
+    padding: 0px;
+}
+#modal-content p{
+    color: white;
+}
+
+.loader {
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: helvetica, arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #ce4233;
+  letter-spacing: 0.2em;
+}
+.loader::before, .loader::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: #ce4233;
+  position: absolute;
+  -webkit-animation: load .7s infinite alternate ease-in-out;
+          animation: load .7s infinite alternate ease-in-out;
+}
+.loader::before {
+  top: 0;
+}
+.loader::after {
+  bottom: 0;
+}
+
+@-webkit-keyframes load {
+  0% {
+    left: 0;
+    height: 30px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 40px;
+  }
+  100% {
+    left: 235px;
+    height: 30px;
+    width: 15px;
+  }
+}
+
+@keyframes load {
+  0% {
+    left: 0;
+    height: 30px;
+    width: 15px;
+  }
+  50% {
+    height: 8px;
+    width: 40px;
+  }
+  100% {
+    left: 235px;
+    height: 30px;
+    width: 15px;
+  }
+}
+.c-three-dots-loader {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: -20px 24px 20px;
+  animation-fill-mode: both;
+  animation: three-dots-loader-animation 2s infinite ease-in-out;
+  animation-delay: -0.16s;
+  color: #041126
+}
+.c-three-dots-loader:before,
+.c-three-dots-loader:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  animation: three-dots-loader-animation 2s infinite ease-in-out;
+  border-radius: 50%;
+}
+.c-three-dots-loader:before {
+  left: -24px;
+  animation-delay: -0.32s;
+}
+.c-three-dots-loader:after {
+  left: 24px;
+}
+@keyframes three-dots-loader-animation {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 20px 0 -24px;
+  }
+  40% {
+    box-shadow: 0 20px 0 0;
+  }
+}
+
+#div1
+{
+    margin-top: 10px;
+    padding-left: 10px;
+    position: absolute;
+    float: left;
+    border-top: 20px solid #8CAAE8;
+    background-color: White;
+    border-left: 5px solid #8CAAE8;
+    border-right: 5px solid #8CAAE8;
+    border-bottom: 5px solid #8CAAE8;
+    font-family: Calibri;
+    margin-left: 20px;
+width: 300px;
+height : 50px;
+}
+#success-alert{
+    background-color: #d4edda;
+}
+.dialog-ovelay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.50);
+    z-index: 999999
+}
+.dialog-ovelay .dialog {
+    width: 400px;
+    margin: 100px auto 0;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,.2);
+    border-radius: 3px;
+    overflow: hidden
+}
+.dialog-ovelay .dialog header {
+    padding: 10px 8px;
+    background-color: #f6f7f9;
+    border-bottom: 1px solid #e5e5e5
+}
+.dialog-ovelay .dialog header h3 {
+    font-size: 14px;
+    margin: 0;
+    color: #555;
+    display: inline-block
+}
+.dialog-ovelay .dialog header .fa-close {
+    float: right;
+    color: #c4c5c7;
+    cursor: pointer;
+    transition: all .5s ease;
+    padding: 0 2px;
+    border-radius: 1px    
+}
+.dialog-ovelay .dialog header .fa-close:hover {
+    color: #b9b9b9
+}
+.dialog-ovelay .dialog header .fa-close:active {
+    box-shadow: 0 0 5px #673AB7;
+    color: #a2a2a2
+}
+.dialog-ovelay .dialog .dialog-msg {
+    padding: 12px 10px
+}
+.dialog-ovelay .dialog .dialog-msg p{
+    margin: 0;
+    font-size: 15px;
+    color: #333
+}
+.dialog-ovelay .dialog footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 8px 10px
+}
+.dialog-ovelay .dialog footer .controls {
+    direction: rtl
+}
+.dialog-ovelay .dialog footer .controls .button {
+    padding: 5px 15px;
+    border-radius: 3px
+}
+.button {
+  cursor: pointer
+}
+.button-default {
+    background-color: rgb(248, 248, 248);
+    border: 1px solid rgba(204, 204, 204, 0.5);
+    color: #5D5D5D;
+}
+.button-danger {
+    background-color: #f44336;
+    border: 1px solid #d32f2f;
+    color: #f5f5f5
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 92%;
+    border-radius:18px;
+    background-color: white;
+    border: 16px solid white;
+    padding: 5px 2px;
+    margin: auto;
+    border-radius: 22px;
+    box-sizing: border-box; 
+    margin-bottom: 3px;
+}
+
+
+.container {
+    padding: 2px 16px;
+}
+
+.my-button {
+    display: block;
+    color: red;
+    border-radius: 5px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right:10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    max-width: 10%;
+    text-align: center;
+    margin: 5px;
+
+}
+.fa {
+    color: black;
+}

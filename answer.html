@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Answer</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" /></head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="main.js"></script>
+
+<body onload="displayResult()">
+	<div id="profile">
+		<div id="header">
+			<ul>
+				<li>
+					<h2 id="logo">StackOverFLowLite</h2>
+				</li>
+				<li>
+					<a class="active" href="answer.html">Answers</a>
+				</li>
+				<li>
+					<a href="questions.html">Questions</a>
+				</li>
+				<li id="right">
+					<a href="#" id="logout" onclick="logOut(event)">Logout</a>
+					<script src="js/logout.js"></script>
+				</li>
+				<li id="right">
+					<a href="profile.html">My profile</a>
+				</li>
+			</ul>
+		</div>
+		<div class="wrappper" style="background-color:#3a475b;">
+			<div id="body">
+				<br>
+				<br>
+				<div class="wrap" style="background-color:white;">
+					<br>
+					<div id="answer">
+						<div id="quest"></div>
+						<p id="quest_body"></p>
+						<p id="answer_no"></p>
+						<div id="answers">
+						</div>
+						<div id="vote">
+						</div>
+						<div id="quiz-form">
+							<div id="answerAlert">
+								<p id="error"></p> 
+							</div>
+							<textarea cols="2" rows="20" id="myAnswer"></textarea>
+							<input type="submit" id="myAnswerButton" value="Post An Answer" onclick="answerQuestion(event)">
+						</div>
+					</div>
+					<br>
+					<br>
+				</div><!--end wrap-->
+			</div><!--end body-->
+			<div id="footer" style="position: relative;">
+				<p>&copy StackOverFlowLite.All rights reserved </p>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="js/questions.js"></script>
+<script src="js/answers.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</html>
