@@ -57,4 +57,3 @@ signupForm.addEventListener("submit", (event) => {
         
 });
 
-
