@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Profile</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+	<script src="main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body onload="userQuestions()">
+	<div id="profile">
+		<!--begin profile-->
+		<div id="header">
+			<ul>
+				<li>
+					<h2 id="logo">StackOverFLowLite</h2>
+				</li>
+				<li>
+					<a href="questions.html">Questions</a>
+				</li>
+				<li id="right">
+					<a href="#" id="logout" onclick="logOut(event)">Logout</a>
+					<script src="js/logout.js"></script>
+				</li>
+				<li id="right">
+					<a href="profile.html" class="active">My profile</a>
+				</li>
+			</ul>
+		</div>
+		<div id="body" >
+			<br>
+			<br>
+			<div class="wrap">
+				<br>
+				<div id="answer">
+					<div id="table">
+						<table>
+							<h2>Profile Information</h2>
+							<tr>
+							<td>
+								<div id="profileImageDisplay">
+									<img src="images/flower.png" id="profileImage" width="60px" height="60px">
+								</div>
+							</td>
+							<td>
+								<div class="row">
+									<div class="column" style="width: 100%">
+										<p id="username"></p>
+										<p id="email"></p>
+										<i id="totalQuestions"></i>
+										<i id="totalAnswers"></i>
+									</div>
+								</div>
+							</td>
+							</tr>
+						</table>
+						<h2 id="countQuestions"></h2>
+						<table id="userQuestions">
+							<!--<thead>Recent Questions</thead>-->
+						</table>
+						<table id="userAnswers">
+							<h2 id="countAnswers"></h2>
+							<div class="messageAlert">
+									<div class="alert alert-success" id="success-alert">
+										<span class="close">&times;</span>
+										<a href="javascript:;"  class="btn btn-mini" ><strong>Success! </strong>Answer Updated</a>
+									</div>
+							</div>
+						</table>
+
+						<!-- Update Answer Model -->
+						<div id="myModal" class="modal">
+							<div class="modal-content">
+								<p id="editAnswers">Edit Answer</p>
+							  <span class="close">&times;</span>
+							  <input type="text" id="questionTitle">
+							  <textarea  id="answerContent"></textarea>
+							  <button id="editThis"><b>Update</b></button>
+							</div>
+						</div>
+						<h2>Most Answered</h2>
+						<table id="mostAnswered">
+						</table>
+					</div>
+					<br>
+					<!--end div table-->
+				</div>
+				<br>
+				<br>
+				<!--end wrap-->
+			</div>
+			<!--end body-->
+			<div id="footer" style="position: relative;">
+				<p>&copy StackOverFlowLite.All rights reserved </p>
+			</div>
+		</div>
+		<!--end of profile-->
+</body>
+<script src="js/questions.js"></script>
+<script src="js/updateAnswer.js"></script>
+</html>
