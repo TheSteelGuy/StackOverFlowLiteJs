@@ -1,5 +1,5 @@
-
-
+//var URL = "http://127.0.0.1:5000/api/v2/"
+var URL = "https://stackoverflowlitev2.herokuapp.com/api/v2/"
 var loginForm = document.getElementById("loginForm");
 loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -14,7 +14,7 @@ loginForm.addEventListener("submit", (event) => {
         "email": email,
         "password": password
     })
-    fetch('https://stackoverflowlitev2.herokuapp.com/api/v2/auth/login', {
+    fetch(URL + 'auth/login', {
         method: 'POST',
         mode: "cors",
         headers: { 'Content-Type': 'application/json' },
@@ -37,11 +37,11 @@ loginForm.addEventListener("submit", (event) => {
                 window.localStorage.setItem('auth_token', token)
                 window.location = 'questions.html'
             } else {
+                load.innerHTML = "Sign in Details"
                 document.getElementById('error').innerHTML = data.message
                 document.getElementById('error').style.backgroundColor = 'sienna';
             }
         })
         .catch((error) => {
-            console.log(error)
         })
 });

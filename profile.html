@@ -7,8 +7,10 @@
 	<title>Profile</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-	<script src="main.js"></script>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+	<script src="js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body onload="userQuestions()">
@@ -26,32 +28,35 @@
 					<a href="#" id="logout" onclick="logOut(event)">Logout</a>
 					<script src="js/logout.js"></script>
 				</li>
-				<li id="right">
-					<a href="profile.html">My profile</a>
-				</li>
+				<div id="logged"></div>
 			</ul>
 		</div>
-		<div id="body">
+		<div id="body" >
 			<br>
 			<br>
 			<div class="wrap">
 				<br>
 				<div id="answer">
 					<div id="table">
+						<!-- <div id="error"></div> -->
 						<table>
-							<h2>My Profile Information</h2>
+							<h2>Profile Information</h2>
 							<tr>
+							<td>
 								<div id="profileImageDisplay">
-									<img src="images/flower.png" id="profileImage" width="150px" height="150px">
+									<img src="images/flower.png" id="profileImage" width="60px" height="60px">
 								</div>
-							</tr>
-							<tr>
-								<td>Email: someemail@domain.com | </td>
-								<td>Password: ******* | </td>
-
-								<td>
-									<input type="submit" value="Update Profile" id="Updateprofile">
-								</td>
+							</td>
+							<td>
+								<div class="row">
+									<div class="column" style="width: 100%">
+										<p id="username"></p>
+										<p id="email"></p>
+										<i id="totalQuestions"></i>
+										<i id="totalAnswers"></i>
+									</div>
+								</div>
+							</td>
 							</tr>
 						</table>
 						<h2 id="countQuestions"></h2>
@@ -60,35 +65,26 @@
 						</table>
 						<table id="userAnswers">
 							<h2 id="countAnswers"></h2>
+							<div class="messageAlert">
+									<div class="alert alert-success" id="success-alert">
+										<span class="close">&times;</span>
+										<a href="javascript:;"  class="btn btn-mini" ><strong>Success! </strong>Answer Updated</a>
+									</div>
+							</div>
 						</table>
+
 						<!-- Update Answer Model -->
 						<div id="myModal" class="modal">
 							<div class="modal-content">
+								<p id="editAnswers">Edit Answer</p>
 							  <span class="close">&times;</span>
-							  <button id="editThis">Update</button>
 							  <input type="text" id="questionTitle">
 							  <textarea  id="answerContent"></textarea>
+							  <button id="editThis"><b>Update</b></button>
 							</div>
 						</div>
-						<h2>My Questions With Most Answers</h2>
-						<table>
-							<tr>
-								<th id="question">How do I connect my laptop to the neighbour's Protected Wifi? </th>
-								<td>Answers
-									<a>
-										<i> 5</i>
-									</a>
-								</td>
-							</tr>
-							<tr>
-								<th id="question">Somebody help me Know how to view items Stored in form data object? </th>
-								<td>Answers
-									<a>
-										<i> 3</i>
-									</a>
-								</td>
-							</tr>
-
+						<h2>Most Answered</h2>
+						<table id="mostAnswered">
 						</table>
 					</div>
 					<br>
@@ -99,12 +95,11 @@
 				<!--end wrap-->
 			</div>
 			<!--end body-->
-			<div id="footer" style="position: relative;">
+			<div id="footer">
 				<p>&copy StackOverFlowLite.All rights reserved </p>
 			</div>
 		</div>
 		<!--end of profile-->
 </body>
 <script src="js/questions.js"></script>
-<script src="js/updateAnswer.js"></script>
 </html>
